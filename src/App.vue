@@ -1,21 +1,36 @@
 <template>
+
   <div id="app">
+    <my-header></my-header>
+    <div class="main-container-width ">
     <div id="nav">
-      <router-link to="/">Buttons</router-link> |
-      <router-link to="/dropdowns">Dropdowns</router-link>
+      <router-link to="/">Panel</router-link> |
+      <router-link to="/buttons"> Buttons </router-link> |
+      <router-link to="/dropdowns"> Dropdowns</router-link>
     </div>
+    
     <router-view/>
+  </div>
   </div>
 </template>
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import "@progress/kendo-licensing";
 import "@progress/kendo-ui";
+
  import '@progress/kendo-theme-default/dist/all.css';
-//import "./assets/styles/customTheme/kendo.custom.css";
+import "./assets/styles/customTheme/kendo.custom.css";
+import "./assets/styles/customTheme/style.css";
+
+
+import Header from './components/Header.vue';
+
 
 export default {
-  
+      components:{
+         'my-header':Header,
+         
+     }
 }
 </script>
 <style>

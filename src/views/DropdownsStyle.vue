@@ -1,6 +1,6 @@
 <template>
   <div class="dropdowns">
-    <img alt="Vue logo" src="../assets/logo.png">
+   
     <Dropdowns msg="Dropdowns"/>
   </div>
 </template>

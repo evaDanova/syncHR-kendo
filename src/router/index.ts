@@ -1,12 +1,18 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 import ButtonsStyle from '../views/ButtonsStyle.vue';
+import PanelStyle from '../views/PanelStyle.vue';
 
 Vue.use(VueRouter);
 
 const routes: RouteConfig[] = [
   {
     path: '/',
+    name: 'PanelStyle',
+    component: PanelStyle,
+  },
+  {
+    path: '/buttons',
     name: 'ButtonsStyle',
     component: ButtonsStyle,
   },
