@@ -6,7 +6,9 @@
     <div id="nav">
       <router-link to="/">Panel</router-link> |
       <router-link to="/buttons"> Buttons </router-link> |
-      <router-link to="/dropdowns"> Dropdowns</router-link>
+      <router-link to="/dropdowns"> Dropdowns</router-link> |
+      <router-link to="/forms"> Forms</router-link> |
+      <router-link to="/card"> Card</router-link>
     </div>
     
     <router-view/>
@@ -18,11 +20,20 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 import "@progress/kendo-licensing";
 import "@progress/kendo-ui";
 
- import '@progress/kendo-theme-default/dist/all.css';
-import "./assets/styles/customTheme/kendo.custom.css";
+ // add default-custom-theme
+//import '@progress/kendo-theme-default/dist/all.css';
+//import "./assets/styles/customTheme/kendo.custom.css";
+//import "./assets/styles/customTheme/syncHr.css";
+
+  // add bootstrap and bootstrap-custom-theme
+import "@progress/kendo-theme-bootstrap/dist/all.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./assets/styles/customTheme/syncHRbootstrap.css";
+
+ // add main global custom css
 import "./assets/styles/customTheme/style.css";
 
-
+// add header
 import Header from './components/Header.vue';
 
 

@@ -2,6 +2,8 @@ import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 import ButtonsStyle from '../views/ButtonsStyle.vue';
 import PanelStyle from '../views/PanelStyle.vue';
+import FormsStyle from '../views/FormsStyle.vue';
+import CardsStyle from '../views/CardsStyle.vue';
 
 Vue.use(VueRouter);
 
@@ -15,6 +17,16 @@ const routes: RouteConfig[] = [
     path: '/buttons',
     name: 'ButtonsStyle',
     component: ButtonsStyle,
+  },
+  {
+    path: '/forms',
+    name: 'FormsStyle',
+    component: FormsStyle,
+  },
+  {
+    path: '/card',
+    name: 'CardsStyle',
+    component: CardsStyle,
   },
   {
     path: '/dropdowns',
