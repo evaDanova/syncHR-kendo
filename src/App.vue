@@ -4,11 +4,12 @@
     <my-header></my-header>
     <div class="main-container-width ">
     <div id="nav">
-      <router-link to="/">Panel</router-link> |
-      <router-link to="/buttons"> Buttons </router-link> |
+      <!-- <router-link to="/">Panel</router-link> | -->
+      <router-link to="/"> Buttons </router-link> |
       <router-link to="/dropdowns"> Dropdowns</router-link> |
       <router-link to="/forms"> Forms</router-link> |
-      <router-link to="/card"> Card</router-link>
+      <router-link to="/card"> Card</router-link> | 
+      <router-link to="/dialog"> Dialog</router-link>
     </div>
     
     <router-view/>

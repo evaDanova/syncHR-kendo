@@ -1,7 +1,7 @@
 <template>
   <div class="flex-row flex-justify-content-center">
     <div class="card-box shadow horizontal p12">
-      <div class="card-header flex-row flex-align-items-center mb8">
+      <div class="card-header flex-row flex-align-items-center mb-2">
         <dropdownlist
           class="k-icon k-i-gear"
           :data-items="sports"
@@ -31,14 +31,14 @@
         ></div>
         <div class="flex-column card-info">
           <div class="text-light-gray size-14">Subtitle</div>
-          <div class="text-dark-gray size-16 mb4 bold">Text area</div>
+          <div class="text-dark-gray size-16 mb-1 bold">Text area</div>
           <div class="text-light-gray size-14">Subtitle</div>
           <div class="text-dark-gray size-16 bold">Text area</div>
         </div>
       </div>
     </div>
     <div class="card-box shadow horizontal p12">
-      <div class="card-header flex-row flex-align-items-center mb8">
+      <div class="card-header flex-row flex-align-items-center mb-2">
         <toolbar>
           <toolbar-item
             type="splitButton"
@@ -60,14 +60,14 @@
         ></div>
         <div class="flex-column card-info">
           <div class="text-light-gray size-14">Subtitle</div>
-          <div class="text-dark-gray size-16 mb4 bold">Text area</div>
+          <div class="text-dark-gray size-16 mb-1 bold">Text area</div>
           <div class="text-light-gray size-14">Subtitle</div>
           <div class="text-dark-gray size-16 bold">Text area</div>
         </div>
       </div>
     </div>
     <div class="card-box shadow horizontal p12">
-      <div class="card-header flex-row flex-align-items-center mb8">
+      <div class="card-header flex-row flex-align-items-center mb-2">
         <div class="text-green size-18">Direct Deposit</div>
       </div>
       <div class="card">

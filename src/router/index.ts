@@ -4,17 +4,18 @@ import ButtonsStyle from '../views/ButtonsStyle.vue';
 import PanelStyle from '../views/PanelStyle.vue';
 import FormsStyle from '../views/FormsStyle.vue';
 import CardsStyle from '../views/CardsStyle.vue';
+import DialogsStyle from '../views/DialogsStyle.vue';
 
 Vue.use(VueRouter);
 
 const routes: RouteConfig[] = [
+  // {
+  //   path: '/',
+  //   name: 'PanelStyle',
+  //   component: PanelStyle,
+  // },
   {
     path: '/',
-    name: 'PanelStyle',
-    component: PanelStyle,
-  },
-  {
-    path: '/buttons',
     name: 'ButtonsStyle',
     component: ButtonsStyle,
   },
@@ -27,6 +28,11 @@ const routes: RouteConfig[] = [
     path: '/card',
     name: 'CardsStyle',
     component: CardsStyle,
+  },
+  {
+    path: '/dialog',  
+    name: 'DialogsStyle',
+    component: DialogsStyle,
   },
   {
     path: '/dropdowns',

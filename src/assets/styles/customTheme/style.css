@@ -1,10 +1,3 @@
-/*add bootstrap*/
-
-
-/* @import "../../../../node_modules/@progress/kendo-theme-bootstrap/dist/all.scss";
-@import "../../../../node_modules/@progress/kendo-theme-bootstrap/modules/bootstrap/scss/bootstrap.scss"; */
-
-
 /*Global Styles*/
 
 body * {
@@ -13,15 +6,51 @@ body * {
     padding: 0px;
 }
 
+
+/*#region global custom classes*/
+
 .main-container-width {
     max-width: 1300px;
     margin: auto;
 }
 
+.shadow {
+    -webkit-box-shadow: 3px 0px 6px 3px #9494943D;
+    box-shadow: 3px 0px 6px 3px #9494943D;
+}
+
+.no-border {
+    border: 0px !important;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.bold {
+    font-weight: bold !important;
+}
+
+
+/*#endregion*/
+
+
+/*#region kendo style overwrite*/
+
 button,
 div[role="button"] {
     font-size: 16px !important;
 }
+
+.k-animation-container {
+    z-index: 10003;
+}
+
+
+/*#endregion*/
+
+
+/*#region custom color text*/
 
 .text-green {
     color: #81BE41 !important;
@@ -39,9 +68,24 @@ div[role="button"] {
     color: #3C3C3C !important;
 }
 
+
+/*#endregion*/
+
+
+/*#region align text*/
+
 .text-left {
     text-align: left !important;
 }
+
+
+/*#endregion*/
+
+
+/*#region custom size text*/
+
+
+/*fs-1*/
 
 .size-40 {
     font-size: 40px !important;
@@ -49,17 +93,26 @@ div[role="button"] {
     font-weight: 900 !important;
 }
 
+
+/*fs-2*/
+
 .size-32 {
     font-size: 32px !important;
     line-height: 36px !important;
     font-weight: 900 !important;
 }
 
+
+/*fs-4*/
+
 .size-24 {
     font-size: 24px !important;
     line-height: 26px !important;
     font-weight: 600 !important;
 }
+
+
+/*fs-5*/
 
 .size-20 {
     font-size: 20px !important;
@@ -73,11 +126,17 @@ div[role="button"] {
     font-weight: 600 !important;
 }
 
+
+/*fs-6*/
+
 .size-16 {
     font-size: 16px !important;
     line-height: 18px !important;
     font-weight: normal !important;
 }
+
+
+/*fs-0*/
 
 .size-14 {
     font-size: 14px !important;
@@ -122,7 +181,14 @@ div[role="button"] {
     }
 }
 
-.flex-row {
+
+/*#endregion*/
+
+
+/*#region delete of bootstrap stay start*/
+
+
+/* .flex-row {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -159,40 +225,16 @@ div[role="button"] {
 
 .flex-justify-content-end {
     justify-content: flex-end;
-}
+} */
 
-.shadow {
-    -webkit-box-shadow: 3px 0px 6px 3px #9494943D;
-    box-shadow: 3px 0px 6px 3px #9494943D;
-}
 
-.no-border {
-    border: 0px !important;
-}
+/*#endregion*/
 
-.full-width {
-    width: 100%;
-}
 
-.bold {
-    font-weight: bold !important;
-}
+/*#region custom spaces*/
 
-.mb4 {
-    margin-bottom: 4px !important;
-}
 
-.mt4 {
-    margin-top: 4px !important;
-}
-
-.mb8 {
-    margin-bottom: 8px !important;
-}
-
-.mt8 {
-    margin-top: 8px !important;
-}
+/*k-m-3*/
 
 .mb12 {
     margin-bottom: 12px !important;
@@ -202,13 +244,8 @@ div[role="button"] {
     margin-top: 12px !important;
 }
 
-.mb16 {
-    margin-bottom: 16px !important;
-}
 
-.mt16 {
-    margin-top: 16px !important;
-}
+/*k-m-5*/
 
 .mb20 {
     margin-bottom: 20px !important;
@@ -218,13 +255,8 @@ div[role="button"] {
     margin-top: 20px !important;
 }
 
-.mb24 {
-    margin-bottom: 24px !important;
-}
 
-.mt24 {
-    margin-top: 24px !important;
-}
+/*k-m-8*/
 
 .mb32 {
     margin-bottom: 32px !important;
@@ -234,13 +266,8 @@ div[role="button"] {
     margin-top: 32px !important;
 }
 
-.mb48 {
-    margin-bottom: 48px !important;
-}
 
-.mt48 {
-    margin-top: 48px !important;
-}
+/*k-m-16*/
 
 .mb64 {
     margin-bottom: 64px !important;
@@ -253,3 +280,6 @@ div[role="button"] {
 .p12 {
     padding: 12px !important;
 }
+
+
+/*#endregion*/

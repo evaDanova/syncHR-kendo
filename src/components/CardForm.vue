@@ -9,9 +9,9 @@
           <div class="card no-border">
             <div class="card-block">
               <form class="k-form k-form-horizontal" @submit="handleSubmit">
-                <fieldset class="no-border flex-column">
+                <fieldset class="no-border d-flex flex-column">
                   <div class="k-form-field">
-                    <label class="k-label k-form-label">Name:</label>
+                    <label class="k-label k-form-label size-14">Name:</label>
                     <k-input
                       :name="'username'"
                       :style="{ width: '100%' }"
@@ -22,7 +22,7 @@
                     </k-input>
                   </div>
                   <div class="k-form-field">
-                    <label class="k-label k-form-label">Email:</label>
+                    <label class="k-label k-form-label size-14">Email:</label>
                     <k-input
                       :name="'email'"
                       :type="'email'"
@@ -31,7 +31,6 @@
                     />
                   </div>
                   <div class="k-form-field">
-                    <label class="k-label k-form-label">CV:</label>
                     <div :style="{ width: 'auto' }" :class="size-14">
                       <upload
                         :class="size-14"
@@ -56,7 +55,7 @@
                   </div>
                 </fieldset>
                 <div class="mt12">
-                  <k-button :primary="true" type="submit"
+                  <k-button :primary="true" type="submit" class="size-16"
                     >Submit Application</k-button
                   >
                 </div>
