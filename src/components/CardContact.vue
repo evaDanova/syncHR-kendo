@@ -66,7 +66,7 @@ import {
 
 const cardsData = [
   {
-    thumbnailSrc: "../images/profilePicture.png",
+    thumbnailSrc: "img/profilePicture.png",
     headerTitle: "bg_traditions",
     headerSubtitle: "Bulgaria, Europe",
     headerTitle1: "bg_traditions",
@@ -81,7 +81,7 @@ const cardsData = [
     },
   },
   {
-    thumbnailSrc: "http://localhost:8081/img/profilePicture2.png",
+    thumbnailSrc: "img/profilePicture2.png",
     headerTitle: "bg_mountains",
     headerSubtitle: "Bulgaria, Europe",
     headerTitle1: "bg_mountains",
@@ -96,7 +96,7 @@ const cardsData = [
     },
   },
   {
-    thumbnailSrc: "http://localhost:8081/img/profilePicture2.png",
+    thumbnailSrc: "img/profilePicture2.png",
     headerTitle: "bg_mountains",
     headerSubtitle: "Bulgaria, Europe",
     headerTitle1: "bg_mountains",
