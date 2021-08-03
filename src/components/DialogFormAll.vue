@@ -1,16 +1,18 @@
 <template>
-  <div>
+  <div class="col-md-2 mx-auto">
     <span v-if="!visibleDialog">
       <button class="k-button" @click="toggleDialog">Open Dialog</button>
     </span>
     <k-dialog
+      :width="400"
+      :height="500"
       v-if="visibleDialog"
       :title="'Please confirm'"
       @close="toggleDialog"
     >
-      <div class="col-12 col-md-12 example-col mb-2">
+      <div class="col-12 col-md-12 example-col mb-4 mt-4">
         <div class="d-flex flex-row align-items-center flex-wrap">
-          <p class="text-green text-left mr8">Date Time Picker</p>
+          <label class="text-green text-left me-2 mb-1">Date Time Picker</label>
           <datetimepicker />
         </div>
       </div>
@@ -22,10 +24,11 @@
           d-flex
           flex-column
           align-items-start
+          mb-4 mt-4
         "
       >
-        <div class="d-flex flex-row align-items-center flex-wrap mb-2">
-          <p class="text-green text-left mr8">Date Input</p>
+        <div class="d-flex flex-row align-items-center flex-wrap col-12">
+          <label class="text-green text-left me-2 mb-1">Date Input</label>
           <date-input v-model="value"></date-input>
         </div>
       </div>
@@ -36,9 +39,10 @@
           d-flex
           flex-column
           align-items-start
+          mb-4 mt-4
         "
       >
-        <p class="text-green text-left">Time Picker</p>
+        <label class="text-green text-left mb-1">Time Picker</label>
         <timepicker />
       </div>
 
@@ -49,10 +53,11 @@
           d-flex
           flex-column
           align-items-start
+          mb-4 mt-4
         "
       >
-        <p class="text-green text-left">Input</p>
-        <k-input :label="'First name'"></k-input>
+        <label class="text-green text-left mb-1">Input</label>
+        <k-input :placeholder="'First name'"></k-input>
       </div>
 
       <div
@@ -62,9 +67,10 @@
           d-flex
           flex-column
           align-items-start
+          mb-4 mt-4
         "
       >
-        <p class="text-green text-left">NumericTextBox</p>
+        <label class="text-green text-left mb-1">NumericTextBox</label>
         <numerictextbox :default-value="123.45" :format="'c2'">
         </numerictextbox>
       </div>
@@ -76,9 +82,10 @@
           d-flex
           flex-column
           align-items-start
+          mb-4 mt-4
         "
       >
-        <p class="text-green text-left">MaskedTextBox</p>
+        <label class="text-green text-left mb-1">MaskedTextBox</label>
         <maskedtextbox :mask="'9-000'" :default-value="'_-___'">
         </maskedtextbox>
       </div>
@@ -90,16 +97,27 @@
           d-flex
           flex-column
           align-items-start
+          mb-4 mt-4
         "
       >
-        <p class="text-green text-left">Slider</p>
+        <label class="text-green text-left mb-1">Slider</label>
         <slider :buttons="true" :step="1" :default-value="7" :min="1" :max="10">
         </slider>
       </div>
-       <div class="col-xs-12 col-sm-7 example-col">
-            <p>ComboBox</p>
+       <div class="col-12 col-md-12
+          example-col
+          d-flex
+          flex-column
+          align-items-start
+          mb-4 mt-4">
+            <label class="text-green text-left mb-1">ComboBox</label>
             <combobox :data-items='sports' :default-value="'Basketball'" ></combobox>
         </div>
+          <div class="example-col mt-5">
+              <k-button :primary="true"
+                :icon="'check'" 
+              >Save</k-button>
+            </div>
     </k-dialog>
   </div>
 </template>
@@ -117,7 +135,7 @@ import {
   Slider,
 } from "@progress/kendo-vue-inputs";
 import { AutoComplete, ComboBox, DropDownList, MultiSelect } from '@progress/kendo-vue-dropdowns';
-
+import { Button  } from '@progress/kendo-vue-buttons';
 export default {
   components: {
     "k-dialog": Dialog,
@@ -129,6 +147,7 @@ export default {
     maskedtextbox: MaskedTextBox,
     slider: Slider,
     'combobox': ComboBox,
+    'k-button': Button,
   },
   data: function () {
     return {
@@ -143,5 +162,56 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style>
+/* fix hover btn icons kendo - need only for big border-radius*/
+ .k-link {
+  border-radius: 0 0.625rem 0.625rem 0;
+}
+.k-link-increase{
+  border-radius: 0 0.625rem 0 0;
+}
+.k-link-decrease{
+  border-radius: 0 0 0.625rem 0;
+} 
+
+
+/* fix align btn icons kendo - need only for big border-radius*/
+/* .k-icon{
+ margin-right: 2px; 
+} */
+
+
+/* fix color btn arrow icons kendo */
+.k-button .k-icon.k-i-arrow-e,
+.k-button .k-icon.k-i-arrow-w{
+  color: #fff;
+}
+
+/* fix height field kendo */
+.k-widget input,
+.k-widget select,
+.k-numeric-wrap,
+.k-dropdown-wrap,
+.k-widget  .k-select{
+  height: 44px;
+  font-size: 16px;
+  box-sizing: border-box;
+} 
+.k-clear-value{
+    height: calc( 1.5rem + 1.2rem);
+}
+
+/* fix 100% width for form field */
+.k-datepicker,
+.k-datetimepicker,
+ .k-timepicker,
+.k-dateinput,
+.k-textbox,
+.k-combobox,
+.k-slider-horizontal,
+.k-maskedtextbox,
+.k-numerictextbox,
+.k-button{
+  width: 100%;
+}
 </style>

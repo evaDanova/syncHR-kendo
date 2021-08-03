@@ -1,9 +1,10 @@
 /*Global Styles*/
 
 body * {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+    box-sizing: border-box !important;
+    /* margin: 0px;
+    padding: 0px; */
+    clear: both !important;
 }
 
 

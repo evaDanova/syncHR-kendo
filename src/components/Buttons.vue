@@ -90,16 +90,24 @@
             <k-button :icon-class="'fa fa-calendar fa-fw'">Font Awesome Icon</k-button>
             <k-button :image-url="'https://demos.telerik.com/kendo-ui/content/shared/icons/sports/snowboarding.png'">Image Icon</k-button>
         </div>
+         <div class="example-col">
+              <fab 
+                :icon="'check'" 
+                :text="'Saven'"
+                :align="{ horizontal: 'start', vertical: 'bottom' }"
+              ></fab>
+            </div>
     </div>
 </template>
 
 <script lang="ts">
-import { Button, ButtonGroup } from '@progress/kendo-vue-buttons';
+import { Button, ButtonGroup, FloatingActionButton  } from '@progress/kendo-vue-buttons';
 
 export default {
     components: {
         'k-button': Button,
-        'buttongroup': ButtonGroup
+        'buttongroup': ButtonGroup,
+        'fab': FloatingActionButton,
     }
 }
 </script>

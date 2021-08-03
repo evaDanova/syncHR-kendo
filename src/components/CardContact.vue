@@ -7,7 +7,7 @@
             <span class="k-icon k-i-information k-i-info"></span>
             <div class="size-18 text-green text-left p-2">Contact</div>
           </div>
-          <div>
+          <div class="d-flex justify-content-between">
             <button class="k-button k-flat">
               <span
                 :class="
@@ -66,7 +66,7 @@ import {
 
 const cardsData = [
   {
-    thumbnailSrc: "http://localhost:8081/img/profilePicture.png",
+    thumbnailSrc: "../images/profilePicture.png",
     headerTitle: "bg_traditions",
     headerSubtitle: "Bulgaria, Europe",
     headerTitle1: "bg_traditions",
