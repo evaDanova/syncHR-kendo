@@ -193,7 +193,7 @@ export default {
 .k-numeric-wrap,
 .k-dropdown-wrap,
 .k-widget  .k-select{
-  height: 44px;
+  height: 45px; 
   font-size: 16px;
   box-sizing: border-box;
 } 
