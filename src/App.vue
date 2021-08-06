@@ -38,7 +38,7 @@ export default {
       components:{
          'my-header':Header,
          
-     }
+     },
 }
 </script>
 <style>
