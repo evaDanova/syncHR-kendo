@@ -66,49 +66,44 @@ import {
 
 const cardsData = [
   {
-    thumbnailSrc: "img/profilePicture.png",
+    thumbnailSrc: "img/image1.jpg",
     headerTitle: "bg_traditions",
     headerSubtitle: "Bulgaria, Europe",
     headerTitle1: "bg_traditions",
     headerSubtitle1: "Bulgaria, Europe",
-    commentsExpanded: false,
     postLiked: false,
-    comments: [],
-    newCommentTextValue: "",
     postLikes: 174,
-    scrollViewItems: {
-      url: "https://www.telerik.com/kendo-angular-ui-develop/components/layout/card/assets/rose_festival.jpg",
-    },
+  
   },
   {
-    thumbnailSrc: "img/profilePicture2.png",
+    thumbnailSrc: "img/image2.jpg",
     headerTitle: "bg_mountains",
     headerSubtitle: "Bulgaria, Europe",
     headerTitle1: "bg_mountains",
     headerSubtitle1: "Bulgaria, Europe",
-    commentsExpanded: false,
     postLiked: false,
-    comments: [],
-    newCommentTextValue: "",
     postLikes: 962,
-    scrollViewItems: {
-      url: "https://www.telerik.com/kendo-angular-ui-develop/components/layout/card/assets/rila.jpg",
-    },
+  
   },
   {
-    thumbnailSrc: "img/profilePicture2.png",
+    thumbnailSrc: "img/image3.jpg",
     headerTitle: "bg_mountains",
     headerSubtitle: "Bulgaria, Europe",
     headerTitle1: "bg_mountains",
     headerSubtitle1: "Bulgaria, Europe",
-    commentsExpanded: false,
-    postLiked: false,
-    comments: [],
-    newCommentTextValue: "",
+    postLiked: true,
     postLikes: 962,
-    scrollViewItems: {
-      url: "https://www.telerik.com/kendo-angular-ui-develop/components/layout/card/assets/rila.jpg",
-    },
+  
+  },
+  {
+    thumbnailSrc: "img/image4.jpg",
+    headerTitle: "bg_mountains",
+    headerSubtitle: "Bulgaria, Europe",
+    headerTitle1: "bg_mountains",
+    headerSubtitle1: "Bulgaria, Europe",
+    postLiked: true,
+    postLikes: 962,
+  
   },
 ];
 
@@ -156,6 +151,8 @@ export default {
   display: block;
   border: 4px solid #81be41;
   border-radius: 50%;
+      background-position: center center;
+    background-size: 100%;
 }
 .card-info {
   width: calc(100% - 90px);

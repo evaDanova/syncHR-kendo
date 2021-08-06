@@ -17,7 +17,6 @@
         <cardBody class="k-hbox" style="background: transparent">
           <kendo-listview
             :bordered=false
-            :class="dasda"
             :data-source="card.dataitems"
             :template="`<div class='rounded-3 full-width py-4 px-2 border mb-4 d-flex flex-row align-items-center justify-content-between'><div class='flex-column d-flex align-items-start'><div class'size16 text-dark-gray'>#:title#</div><div class='size12 text-very-light-gray'>Deposit from  #:subTitle#</div></div><div class='size16 text-green'>+$ #:sum#</div></div>`"
           >
@@ -45,6 +44,20 @@ const cardsData = [
       ],
   },
   {
+    dataitems: [
+      { title: "Savings", subTitle: '03.09.2021', sum: '12 43434' }, 
+      { title: "Savings", subTitle: '08.06.2021', sum: '17 657' },
+      { title: "Savings", subTitle: '05.05.2021', sum: '2 43434'  }
+      ],
+  },
+   {
+    dataitems: [
+      { title: "Savings", subTitle: '03.09.2021', sum: '12 43434' }, 
+      { title: "Savings", subTitle: '08.06.2021', sum: '17 657' },
+      { title: "Savings", subTitle: '05.05.2021', sum: '2 43434'  }
+      ],
+  },
+   {
     dataitems: [
       { title: "Savings", subTitle: '03.09.2021', sum: '12 43434' }, 
       { title: "Savings", subTitle: '08.06.2021', sum: '17 657' },

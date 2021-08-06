@@ -1,26 +1,17 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
-import ButtonsStyle from '../views/ButtonsStyle.vue';
-import PanelStyle from '../views/PanelStyle.vue';
 import FormsStyle from '../views/FormsStyle.vue';
 import CardsStyle from '../views/CardsStyle.vue';
 import DialogsStyle from '../views/DialogsStyle.vue';
+import TablesStyle from '../views/TablesStyle.vue';
 
 Vue.use(VueRouter);
 
 const routes: RouteConfig[] = [
-  // {
-  //   path: '/',
-  //   name: 'PanelStyle',
-  //   component: PanelStyle,
-  // },
+
+  
   {
     path: '/',
-    name: 'ButtonsStyle',
-    component: ButtonsStyle,
-  },
-  {
-    path: '/forms',
     name: 'FormsStyle',
     component: FormsStyle,
   },
@@ -35,13 +26,11 @@ const routes: RouteConfig[] = [
     component: DialogsStyle,
   },
   {
-    path: '/dropdowns',
-    name: 'DropdownsStyle',
-    // route level code-splitting
-    // this generates a separate chunk (Dropdowns.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "Dropdowns" */ '../views/DropdownsStyle.vue'),
-  },
+  path: '/table',  
+  name: 'TablesStyle',
+  component: TablesStyle,
+},
+ 
 ];
 
 const router = new VueRouter({

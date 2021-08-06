@@ -92,6 +92,10 @@ const cardsData = [
     
     headerTitle: "Some Title 3",
   },
+  {
+    
+    headerTitle: "Some Title 4",
+  },
 ];
 
 export default {

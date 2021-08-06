@@ -1,23 +1,159 @@
 <template>
- <nav>
-    <a>Home</a>
-    <a>Posts</a>
-    <a>Contact</a>
-  </nav>
+<div>
+<div v-if="!isMobile" class="header-desctop d-flex flex-row justify-content-between align-items-center">
+  <div class="header-left-pat d-flex flex-row justify-content-start align-items-center">
+    <img class="logo me-4" src="img/logo.png" />
+    <div class="search-holder d-flex flex-row justify-content-start align-items-center">
+      <span class="k-icon k-i-search text-green size-24"></span>
+  <kendo-autocomplete :data-source="dataSourceArray"
+                        :placeholder="'Search...'">
+    </kendo-autocomplete>
+      </div>
+  </div>
+  <div class="header-right-pat">
+      <kendo-menu @select="onSelect">
+        <li>
+        <span class="k-icon k-i-user text-dark-blue size-16"></span>Item 1
+            <ul>
+                <li>Sub Item 1
+                    <ul>
+                        <li>Sub Item 1.1</li>
+                        <li>Sub Item 1.2</li>
+                        <li>Sub Item 1.3</li>
+                    </ul>
+                </li>
+                <li>Sub Item 2</li>
+                <li>Sub Item 3</li>
+            </ul>
+        </li>
+        <li>
+           <span class="k-icon k-i-notification text-dark-blue size-16"></span> Item 2
+            <ul>
+                <li>Sub Item 1</li>
+                <li>Sub Item 2</li>
+                <li>Sub Item 3</li>
+            </ul>
+        </li>
+        <li>
+           <span class="k-icon k-i-gears text-dark-blue size-16"></span> Item3
+            <ul>
+                <li>Sub Item 1</li>
+                <li>Sub Item 2</li>
+                <li>Sub Item 3</li>
+            </ul>
+        </li>
+    </kendo-menu>
+    </div>
+    </div>
+    <div v-if="isMobile" class="header-mobile d-flex flex-row justify-content-between align-items-center">
+      <div class="menu-btn-mobile  d-flex flex-column justify-content-center align-items-center">
+        
+         <button class="k-button" @click="alert">
+           <span class="k-icon k-i-notification text-dark-blue size-16"></span>
+           Notification
+           </button>
+             <button class="k-button" @click="alert">
+           <span class="k-icon k-i-notification text-dark-blue size-16"></span>
+           Notification
+           </button>
+             <button class="k-button" @click="alert">
+           <span class="k-icon k-i-notification text-dark-blue size-16"></span>
+           Notification
+           </button>
+             <button class="k-button" @click="alert">
+           <span class="k-icon k-i-notification text-dark-blue size-16"></span>
+           Notification
+           </button>
+        </div>
+      </div>
+    </div>
 </template>
+<script>
+import { Menu, MenuItem } from '@progress/kendo-layout-vue-wrapper';
+import { AutoComplete } from '@progress/kendo-dropdowns-vue-wrapper';
+import { KendoDataSource } from '@progress/kendo-datasource-vue-wrapper';
+import { Dialog, DialogAction } from '@progress/kendo-dialog-vue-wrapper';
 
-<script lang="ts">
-import { Button, ButtonGroup } from '@progress/kendo-vue-buttons';
 
 export default {
-    components: {
-        'k-button': Button,
-        'buttongroup': ButtonGroup
+  components: {
+    'kendo-menu': Menu,
+    'kendo-menu-item': MenuItem,
+    'kendo-autocomplete': AutoComplete,
+    'kendo-datasource': KendoDataSource,
+     'kendo-dialog': Dialog,
+    'kendo-dialog-action': DialogAction
+  },
+    computed: {
+    isMobile() {
+      return window.innerWidth <= 768;
+    },
+  },
+   methods: {
+        onSelect: function (e) {
+            var currentItemText = $(e.item.firstChild).text().trim();
+            console.log(currentItemText + " clicked.");
+        },
+        alert () {
+	    kendo.alert("This is a Kendo UI Alert message.");
+		},
+    },
+     data: function() {
+        return {
+            autocompleteValue: "",
+            dataSourceArray: [
+                'Albania',
+                'Andorra',
+                'Armenia',
+                'Austria',
+                'Azerbaijan',
+                'Belarus',
+                'Belgium',
+                'Bosnia & Herzegovina',
+                'Bulgaria',
+                'Croatia',
+                'Cyprus',
+                'Czech Republic',
+                'Denmark',
+                'Estonia',
+                'Finland',
+                'France',
+                'Georgia',
+                'Germany',
+                'Greece',
+                'Hungary',
+                'Iceland',
+                'Ireland',
+                'Italy',
+                'Kosovo',
+                'Latvia',
+                'Liechtenstein',
+                'Lithuania',
+                'Luxembourg',
+                'Macedonia',
+                'Malta',
+                'Moldova',
+                'Monaco',
+                'Montenegro',
+                'Netherlands',
+                'Norway',
+                'Poland',
+                'Portugal',
+                'Romania',
+                'Russia',
+                'San Marino',
+                'Serbia',
+                'Slovakia',
+                'Slovenia',
+                'Spain',
+                'Sweden',
+                'Switzerland',
+                'Turkey',
+                'Ukraine',
+                'United Kingdom',
+                'Vatican City'
+            ]
+        }
     }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-</style>

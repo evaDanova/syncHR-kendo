@@ -4,12 +4,10 @@
     <my-header></my-header>
     <div class="main-container-width ">
     <div id="nav">
-      <!-- <router-link to="/">Panel</router-link> | -->
-      <router-link to="/"> Buttons </router-link> |
-      <router-link to="/dropdowns"> Dropdowns</router-link> |
-      <router-link to="/forms"> Forms</router-link> |
+      <router-link to="/"> Forms</router-link> |
       <router-link to="/card"> Card</router-link> | 
-      <router-link to="/dialog"> Dialog</router-link>
+      <router-link to="/dialog"> Dialog</router-link> |
+       <router-link to="/table"> Table</router-link>
     </div>
     
     <router-view/>
@@ -22,8 +20,6 @@ import "@progress/kendo-licensing";
 import "@progress/kendo-ui";
 
  // add default-custom-theme
-//import '@progress/kendo-theme-default/dist/all.css';
-//import "./assets/styles/customTheme/kendo.custom.css";
 //import "./assets/styles/customTheme/syncHr.css";
 
   // add bootstrap and bootstrap-custom-theme

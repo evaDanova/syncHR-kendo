@@ -2,8 +2,6 @@
 
 body * {
     box-sizing: border-box !important;
-    /* margin: 0px;
-    padding: 0px; */
     clear: both !important;
 }
 
@@ -48,10 +46,99 @@ div[role="button"] {
 }
 
 
+/* kendo listview overite style */
+
+.k-listview.k-listview-bordered {
+    border: 0px;
+}
+
+.k-listview div[role="listitem"] {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+
+/* kendo panelbar overite style */
+
+.k-panelbar {
+    margin-bottom: 5px;
+}
+
+.k-panelbar .k-link,
+.k-menu-link.k-link {
+    border-radius: 0px;
+}
+
+.k-panelbar>.k-item>.k-link,
+.k-panelbar>.k-panelbar-header>.k-link {
+    text-transform: none;
+}
+
+
+/* fix hover btn icons kendo */
+
+.k-link {
+    border-radius: 0 0.625rem 0.625rem 0;
+}
+
+.k-link-increase {
+    border-radius: 0 0.625rem 0 0;
+}
+
+.k-link-decrease {
+    border-radius: 0 0 0.625rem 0;
+}
+
+
+/* fix color btn arrow icons kendo */
+
+.k-button .k-icon.k-i-arrow-e,
+.k-button .k-icon.k-i-arrow-w {
+    color: #fff;
+}
+
+
+/* fix height field kendo */
+
+.k-widget input,
+.k-widget select,
+.k-numeric-wrap,
+.k-dropdown-wrap,
+.k-widget .k-select {
+    height: 44px;
+    font-size: 16px;
+    margin-right: -1px;
+}
+
+.k-clear-value {
+    height: calc( 1.5rem + 1.2rem);
+}
+
+
+/* fix 100% width for form field */
+
+.k-datepicker,
+.k-datetimepicker,
+.k-timepicker,
+.k-dateinput,
+.k-textbox,
+.k-combobox,
+.k-slider-horizontal,
+.k-maskedtextbox,
+.k-numerictextbox,
+.k-button {
+    width: 100%;
+}
+
+
 /*#endregion*/
 
 
 /*#region custom color text*/
+
+.text-dark-blue {
+    color: #183D6E;
+}
 
 .text-green {
     color: #81BE41 !important;
@@ -124,7 +211,7 @@ div[role="button"] {
 .size-18 {
     font-size: 18px !important;
     line-height: 20px !important;
-    font-weight: 600 !important;
+    font-weight: 600;
 }
 
 
@@ -133,7 +220,7 @@ div[role="button"] {
 .size-16 {
     font-size: 16px !important;
     line-height: 18px !important;
-    font-weight: normal !important;
+    font-weight: normal;
 }
 
 
@@ -142,25 +229,25 @@ div[role="button"] {
 .size-14 {
     font-size: 14px !important;
     line-height: 16px !important;
-    font-weight: normal !important;
+    font-weight: normal;
 }
 
 .size-12 {
     font-size: 12px !important;
     line-height: 14px !important;
-    font-weight: normal !important;
+    font-weight: normal;
 }
 
 @media only screen and (max-width: 1200px) {
     .size-20 {
         font-size: 16px !important;
         line-height: 18px !important;
-        font-weight: normal !important;
+        font-weight: normal;
     }
     .size-18 {
         font-size: 16px !important;
         line-height: 18px !important;
-        font-weight: normal !important;
+        font-weight: normal;
     }
 }
 
