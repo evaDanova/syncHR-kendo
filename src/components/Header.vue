@@ -86,16 +86,14 @@
           menu-btn-mobile
           d-flex
           flex-row
-          justify-content-between
+          justify-content-center
           align-items-center
           full-width
         "
       >
-        <div class="col-md-2">
+        <div class="col-md-2 mx-4">
           <button
             class="
-              k-button
-              col-md-2
               d-flex
               flex-column
               justify-content-start
@@ -107,11 +105,9 @@
             <span>Item 1</span>
           </button>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 mx-4">
           <button
             class="
-              k-button
-              col-md-2
               d-flex
               flex-column
               justify-content-start
@@ -123,11 +119,9 @@
             <span>Item 2</span>
           </button>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 mx-4">
           <button
             class="
-              k-button
-              col-md-2
               d-flex
               flex-column
               justify-content-start
@@ -139,15 +133,14 @@
             <span>Item 3</span>
           </button>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 mx-4">
           <button
             class="
-              k-button
-              col-md-2
               d-flex
               flex-column
               justify-content-start
               align-items-center
+              
             "
             @click="alert"
           >
@@ -248,13 +241,5 @@ export default {
 };
 </script>
 <style>
-/* Header style */
-.header-desctop .search-holder .k-autocomplete{
-  border: 0px !important;
-  border-bottom: 1px solid #0000001A !important;
-  border-radius: 0px !important;
-}
-.header-desctop .k-menu:not(.k-context-menu){
-  background-color: #fff;
-}
+
 </style>

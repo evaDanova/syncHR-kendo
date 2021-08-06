@@ -57,6 +57,24 @@ div[role="button"] {
 }
 
 
+/* Header style */
+
+.header-desctop .search-holder .k-autocomplete {
+    border: 0px !important;
+    border-bottom: 1px solid #0000001A !important;
+    border-radius: 0px !important;
+}
+
+.header-desctop .k-menu:not(.k-context-menu) {
+    background-color: #fff;
+}
+
+.header-mobile button {
+    border: 0px;
+    background-color: #fff;
+}
+
+
 /* kendo listview overite style */
 
 .k-listview.k-listview-bordered {
